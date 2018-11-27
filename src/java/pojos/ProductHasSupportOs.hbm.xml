@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 4, 2018 3:43:44 PM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="pojos.ProductHasSupportOs" table="product_has_support_os" catalog="soft_shop">
+        <id name="idproductHasSupportOs" type="java.lang.Integer">
+            <column name="idproduct_has_support_os" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="product" class="pojos.Product" fetch="select">
+            <column name="product_idproduct" not-null="true" />
+        </many-to-one>
+        <many-to-one name="supportOs" class="pojos.SupportOs" fetch="select">
+            <column name="support_os_idsupport_os" not-null="true" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

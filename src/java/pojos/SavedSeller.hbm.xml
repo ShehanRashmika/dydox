@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 4, 2018 3:43:44 PM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="pojos.SavedSeller" table="saved_seller" catalog="soft_shop">
+        <id name="idsavedSeller" type="java.lang.Integer">
+            <column name="idsaved_seller" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="seller" class="pojos.Seller" fetch="select">
+            <column name="seller_idseller" not-null="true" />
+        </many-to-one>
+        <many-to-one name="user" class="pojos.User" fetch="select">
+            <column name="user_iduser" not-null="true" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 4, 2018 3:43:44 PM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="pojos.InvoicePackage" table="invoice_package" catalog="soft_shop">
+        <id name="idinvoicePackage" type="java.lang.Integer">
+            <column name="idinvoice_package" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="sellerHasPackage" class="pojos.SellerHasPackage" fetch="select">
+            <column name="seller_has_package_seller_has_packageId" not-null="true" />
+        </many-to-one>
+        <many-to-one name="user" class="pojos.User" fetch="select">
+            <column name="user_iduser" not-null="true" />
+        </many-to-one>
+        <property name="date" type="date">
+            <column name="date" length="10" />
+        </property>
+        <property name="status" type="string">
+            <column name="status" length="45" />
+        </property>
+    </class>
+</hibernate-mapping>

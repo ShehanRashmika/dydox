@@ -1,0 +1,123 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 4, 2018 3:43:44 PM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="pojos.Product" table="product" catalog="soft_shop">
+        <id name="idproduct" type="java.lang.Integer">
+            <column name="idproduct" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="seller" class="pojos.Seller" fetch="select">
+            <column name="seller_idseller" not-null="true" />
+        </many-to-one>
+        <many-to-one name="admin" class="pojos.Admin" fetch="select">
+            <column name="admin_idadmin" not-null="true" />
+        </many-to-one>
+        <many-to-one name="sfCategory" class="pojos.SfCategory" fetch="select">
+            <column name="sf_category" not-null="true" />
+        </many-to-one>
+        <property name="sfType" type="string">
+            <column name="sf_type" length="45" />
+        </property>
+        <property name="sfLanguage" type="string">
+            <column name="sf_language" length="45" />
+        </property>
+        <property name="title" type="string">
+            <column name="title" length="45" />
+        </property>
+        <property name="smallDes" type="string">
+            <column name="small_des" length="65535" />
+        </property>
+        <property name="briefDes" type="string">
+            <column name="brief_des" length="65535" />
+        </property>
+        <property name="features" type="string">
+            <column name="features" length="65535" />
+        </property>
+        <property name="img1" type="string">
+            <column name="img1" length="65535" />
+        </property>
+        <property name="img2" type="string">
+            <column name="img2" length="65535" />
+        </property>
+        <property name="img3" type="string">
+            <column name="img3" length="65535" />
+        </property>
+        <property name="video" type="string">
+            <column name="video" length="65535" />
+        </property>
+        <property name="demoZip" type="string">
+            <column name="demo_zip" length="65535" />
+        </property>
+        <property name="orginalZip" type="string">
+            <column name="orginal_zip" length="65535" />
+        </property>
+        <property name="srs" type="string">
+            <column name="srs" length="65535" />
+        </property>
+        <property name="returnAccept" type="java.lang.Boolean">
+            <column name="return_accept" />
+        </property>
+        <property name="addDate" type="date">
+            <column name="add_date" length="10" />
+        </property>
+        <property name="price" type="java.lang.Double">
+            <column name="price" precision="22" scale="0" />
+        </property>
+        <property name="sellLimit" type="string">
+            <column name="sell_limit" length="45" />
+        </property>
+        <property name="status" type="string">
+            <column name="status" length="45" />
+        </property>
+        <set name="wishListHasItems" table="wish_list_has_item" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="product_idproduct" not-null="true" />
+            </key>
+            <one-to-many class="pojos.WishListHasItem" />
+        </set>
+        <set name="cartHasItems" table="cart_has_item" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="product_idproduct" not-null="true" />
+            </key>
+            <one-to-many class="pojos.CartHasItem" />
+        </set>
+        <set name="productHasPlatforms" table="product_has_platform" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="product_idproduct" not-null="true" />
+            </key>
+            <one-to-many class="pojos.ProductHasPlatform" />
+        </set>
+        <set name="productHasSupportOses" table="product_has_support_os" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="product_idproduct" not-null="true" />
+            </key>
+            <one-to-many class="pojos.ProductHasSupportOs" />
+        </set>
+        <set name="commentses" table="comments" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="product_idproduct" not-null="true" />
+            </key>
+            <one-to-many class="pojos.Comments" />
+        </set>
+        <set name="invoiceProductHasItems" table="invoice_product_has_item" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="product_idproduct" not-null="true" />
+            </key>
+            <one-to-many class="pojos.InvoiceProductHasItem" />
+        </set>
+        <set name="PRates" table="p_rate" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="product_idproduct" not-null="true" />
+            </key>
+            <one-to-many class="pojos.PRate" />
+        </set>
+        <set name="disandaddons" table="disandaddon" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="product_idproduct" not-null="true" />
+            </key>
+            <one-to-many class="pojos.Disandaddon" />
+        </set>
+    </class>
+</hibernate-mapping>

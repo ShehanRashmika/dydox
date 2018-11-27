@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 4, 2018 3:43:44 PM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="pojos.InvoiceProductHasItem" table="invoice_product_has_item" catalog="soft_shop">
+        <id name="idinvoiceProductHasItem" type="java.lang.Integer">
+            <column name="idinvoice_product_has_item" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="invoiceProduct" class="pojos.InvoiceProduct" fetch="select">
+            <column name="invoice_product_idinvoice_product" not-null="true" />
+        </many-to-one>
+        <many-to-one name="product" class="pojos.Product" fetch="select">
+            <column name="product_idproduct" not-null="true" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

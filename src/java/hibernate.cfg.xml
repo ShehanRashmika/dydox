@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="hibernate.connection.url">jdbc:mysql://localhost:3307/soft_shop?zeroDateTimeBehavior=convertToNull</property>
+    <property name="hibernate.connection.username">root</property>
+    <property name="hibernate.connection.password">123</property>
+    <mapping resource="pojos/ProductHasPlatform.hbm.xml"/>
+    <mapping resource="pojos/ProductHasSupportOs.hbm.xml"/>
+    <mapping resource="pojos/PurchaseHistory.hbm.xml"/>
+    <mapping resource="pojos/SupportOs.hbm.xml"/>
+    <mapping resource="pojos/WishList.hbm.xml"/>
+    <mapping resource="pojos/Admin.hbm.xml"/>
+    <mapping resource="pojos/SellerHasPackage.hbm.xml"/>
+    <mapping resource="pojos/ReqProject.hbm.xml"/>
+    <mapping resource="pojos/CartHasItem.hbm.xml"/>
+    <mapping resource="pojos/SfCategory.hbm.xml"/>
+    <mapping resource="pojos/SavedSeller.hbm.xml"/>
+    <mapping resource="pojos/Product.hbm.xml"/>
+    <mapping resource="pojos/WishListHasItem.hbm.xml"/>
+    <mapping resource="pojos/PRate.hbm.xml"/>
+    <mapping resource="pojos/InvoiceProduct.hbm.xml"/>
+    <mapping resource="pojos/Notifications.hbm.xml"/>
+    <mapping resource="pojos/InvoicePackage.hbm.xml"/>
+    <mapping resource="pojos/SRate.hbm.xml"/>
+    <mapping resource="pojos/User.hbm.xml"/>
+    <mapping resource="pojos/Messages.hbm.xml"/>
+    <mapping resource="pojos/Disandaddon.hbm.xml"/>
+    <mapping resource="pojos/Cart.hbm.xml"/>
+    <mapping resource="pojos/SellerPackage.hbm.xml"/>
+    <mapping resource="pojos/Comments.hbm.xml"/>
+    <mapping resource="pojos/InvoiceProductHasItem.hbm.xml"/>
+    <mapping resource="pojos/SfPlatform.hbm.xml"/>
+    <mapping resource="pojos/Seller.hbm.xml"/>
+  </session-factory>
+</hibernate-configuration>

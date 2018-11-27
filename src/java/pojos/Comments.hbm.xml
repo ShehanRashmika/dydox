@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 4, 2018 3:43:44 PM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="pojos.Comments" table="comments" catalog="soft_shop">
+        <id name="idcomments" type="java.lang.Integer">
+            <column name="idcomments" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="product" class="pojos.Product" fetch="select">
+            <column name="product_idproduct" not-null="true" />
+        </many-to-one>
+        <many-to-one name="user" class="pojos.User" fetch="select">
+            <column name="user_iduser" not-null="true" />
+        </many-to-one>
+        <property name="comment" type="string">
+            <column name="comment" length="400" />
+        </property>
+        <property name="date" type="date">
+            <column name="date" length="10" />
+        </property>
+        <property name="time" type="time">
+            <column name="time" length="8" />
+        </property>
+    </class>
+</hibernate-mapping>

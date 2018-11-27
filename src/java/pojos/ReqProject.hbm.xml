@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 4, 2018 3:43:44 PM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="pojos.ReqProject" table="req_project" catalog="soft_shop">
+        <id name="idreqProject" type="java.lang.Integer">
+            <column name="idreq_project" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="sfCategory" class="pojos.SfCategory" fetch="select">
+            <column name="sf_category" not-null="true" />
+        </many-to-one>
+        <many-to-one name="user" class="pojos.User" fetch="select">
+            <column name="user_iduser" not-null="true" />
+        </many-to-one>
+        <property name="date" type="date">
+            <column name="date" length="10" />
+        </property>
+        <property name="title" type="string">
+            <column name="title" length="45" />
+        </property>
+        <property name="sfPlatform" type="string">
+            <column name="sf_platform" length="45" />
+        </property>
+        <property name="des" type="string">
+            <column name="des" length="200" />
+        </property>
+        <property name="wishPrice" type="java.lang.Double">
+            <column name="wish_price" precision="22" scale="0" />
+        </property>
+    </class>
+</hibernate-mapping>

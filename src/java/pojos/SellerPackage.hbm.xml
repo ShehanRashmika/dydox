@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 4, 2018 3:43:44 PM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="pojos.SellerPackage" table="seller_package" catalog="soft_shop">
+        <id name="idpackage" type="java.lang.Integer">
+            <column name="idpackage" />
+            <generator class="identity" />
+        </id>
+        <property name="name" type="string">
+            <column name="name" length="45" />
+        </property>
+        <property name="maxAddTime" type="java.lang.Integer">
+            <column name="max_addTime" />
+        </property>
+        <property name="validMonths" type="java.lang.Integer">
+            <column name="valid_months" />
+        </property>
+        <property name="profitPercentage" type="java.lang.Integer">
+            <column name="profit_percentage" />
+        </property>
+        <property name="price" type="java.lang.Double">
+            <column name="price" precision="22" scale="0" />
+        </property>
+        <set name="sellerHasPackages" table="seller_has_package" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="seller_package_idpackage" not-null="true" />
+            </key>
+            <one-to-many class="pojos.SellerHasPackage" />
+        </set>
+    </class>
+</hibernate-mapping>

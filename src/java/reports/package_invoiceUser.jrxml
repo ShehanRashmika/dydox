@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="package_invoiceUser" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="645a6c3b-8ad9-4491-a2e7-cd99a38728b6">
+	<property name="ireport.zoom" value="1.7715610000000013"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<field name="INV_ID" class="java.lang.String"/>
+	<field name="DATE" class="java.lang.String"/>
+	<field name="USER" class="java.lang.String"/>
+	<field name="PACKAGE" class="java.lang.String"/>
+	<field name="PRICE" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="555" height="79" backcolor="#343A40" uuid="8f2903ff-0a96-4b57-b8bd-0a4422718bff"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="435" y="13" width="119" height="33" forecolor="#FFFFFF" backcolor="#343A40" uuid="463ca963-4ec5-4e22-866a-ccd49d098060"/>
+				<textElement>
+					<font fontName="SansSerif" size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[
+dydox.lk@gmail.com]]></text>
+			</staticText>
+			<image>
+				<reportElement mode="Opaque" x="8" y="13" width="61" height="53" backcolor="#343A40" uuid="7a44a97e-2a7d-4969-b4f3-c71d17de5972"/>
+				<imageExpression><![CDATA["C:\\Users\\Sheha\\Desktop\\dyDox.LK\\ico\\head_4.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement mode="Opaque" x="435" y="46" width="119" height="33" forecolor="#FFFFFF" backcolor="#343A40" uuid="54232366-0055-4952-b212-8ce053918067"/>
+				<textElement>
+					<font fontName="SansSerif" size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[(+94) 757647290]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="50" y="25" width="152" height="33" forecolor="#FFFFFF" backcolor="#343A40" uuid="0599ed9e-214c-4137-b3f9-9193b7669948"/>
+				<textElement>
+					<font fontName="Century Gothic" size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[  DYDOX.LK]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="252" y="43" width="160" height="33" forecolor="#FFFFFF" backcolor="#343A40" uuid="1d3dcabd-b1b2-44c7-805c-6c10d13e9f96"/>
+				<textElement>
+					<font fontName="Century Gothic" size="14" isBold="false" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[INVOICES]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="23" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="111" height="20" backcolor="#999999" uuid="d969c839-c56d-4890-8771-fece2b9690b8"/>
+				<box topPadding="1" leftPadding="1" bottomPadding="1">
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[INV_ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="111" y="0" width="111" height="20" backcolor="#999999" uuid="c6c4d407-8cb3-4356-a3ba-6938ca500826"/>
+				<box topPadding="1" leftPadding="1" bottomPadding="1">
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[DATE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="222" y="0" width="111" height="20" backcolor="#999999" uuid="363ef55f-4593-4ee6-8e65-92e7beaab59e"/>
+				<box topPadding="1" leftPadding="1" bottomPadding="1">
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[USER]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="333" y="0" width="111" height="20" backcolor="#999999" uuid="6c7f5239-2e90-437c-bac9-3c84dc1b8e94"/>
+				<box topPadding="1" leftPadding="1" bottomPadding="1">
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[PACKAGE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="444" y="0" width="111" height="20" backcolor="#999999" uuid="b7e0c786-d092-4eb3-bb4d-e0f1fad9b9c6"/>
+				<box topPadding="1" leftPadding="1" bottomPadding="1">
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[PRICE]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement mode="Opaque" x="0" y="0" width="111" height="20" backcolor="#CCCCCC" uuid="d466794a-2926-491a-b1e7-bc55f7bc558e"/>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{INV_ID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="111" y="0" width="111" height="20" backcolor="#CCCCCC" uuid="58112660-b0a8-48b1-9d42-a67e203e2067"/>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{DATE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="222" y="0" width="111" height="20" backcolor="#CCCCCC" uuid="c0283f1b-5204-4387-a27c-ad3102d80770"/>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{USER}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="333" y="0" width="111" height="20" backcolor="#CCCCCC" uuid="9f7f279e-687f-4081-9284-4214ece86b09"/>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{PACKAGE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="444" y="0" width="111" height="20" backcolor="#CCCCCC" uuid="88bd9cb8-fab3-4733-8dd9-15c5bafeb1e3"/>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{PRICE}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="555" height="54" backcolor="#343A40" uuid="b2306648-9e64-4051-b0fa-d755495bdfd7"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="344" y="22" width="191" height="22" forecolor="#FFFFFF" backcolor="#343A40" uuid="ce708660-28af-4fdc-b470-4ddd033be3d1"/>
+				<textElement>
+					<font fontName="SansSerif" size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[© 2018 DYDOX.LK ALL RIGHTS RESERVED]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="18" y="10" width="119" height="33" forecolor="#FFFFFF" backcolor="#343A40" uuid="18e047ea-c522-45f7-a255-0f28aa6c153f"/>
+				<textElement>
+					<font fontName="SansSerif" size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[
+dydox.lk@gmail.com]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="178" y="22" width="119" height="22" forecolor="#FFFFFF" backcolor="#343A40" uuid="307d6a0f-5f0a-4d1c-a2b3-a3deff952df8"/>
+				<textElement>
+					<font fontName="SansSerif" size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[(+94) 757647290]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

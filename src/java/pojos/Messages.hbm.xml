@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 4, 2018 3:43:44 PM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="pojos.Messages" table="messages" catalog="soft_shop">
+        <id name="idmessages" type="java.lang.Integer">
+            <column name="idmessages" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="seller" class="pojos.Seller" fetch="select">
+            <column name="seller_idseller" not-null="true" />
+        </many-to-one>
+        <many-to-one name="admin" class="pojos.Admin" fetch="select">
+            <column name="admin_idadmin" not-null="true" />
+        </many-to-one>
+        <many-to-one name="user" class="pojos.User" fetch="select">
+            <column name="user_iduser" not-null="true" />
+        </many-to-one>
+        <property name="msgHeading" type="string">
+            <column name="msg_heading" length="45" />
+        </property>
+        <property name="msgBody" type="string">
+            <column name="msg_body" length="300" />
+        </property>
+    </class>
+</hibernate-mapping>

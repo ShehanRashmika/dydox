@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 4, 2018 3:43:44 PM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="pojos.SellerHasPackage" table="seller_has_package" catalog="soft_shop">
+        <id name="sellerHasPackageId" type="java.lang.Integer">
+            <column name="seller_has_packageId" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="sellerPackage" class="pojos.SellerPackage" fetch="select">
+            <column name="seller_package_idpackage" not-null="true" />
+        </many-to-one>
+        <many-to-one name="seller" class="pojos.Seller" fetch="select">
+            <column name="seller_idseller" not-null="true" />
+        </many-to-one>
+        <property name="remainingAddTime" type="java.lang.Integer">
+            <column name="remaining_addTime" />
+        </property>
+        <property name="status" type="string">
+            <column name="status" length="45" />
+        </property>
+        <set name="invoicePackages" table="invoice_package" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="seller_has_package_seller_has_packageId" not-null="true" />
+            </key>
+            <one-to-many class="pojos.InvoicePackage" />
+        </set>
+    </class>
+</hibernate-mapping>

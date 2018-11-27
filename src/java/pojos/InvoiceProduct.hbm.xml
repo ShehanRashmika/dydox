@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 4, 2018 3:43:44 PM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="pojos.InvoiceProduct" table="invoice_product" catalog="soft_shop">
+        <id name="idinvoiceProduct" type="java.lang.Integer">
+            <column name="idinvoice_product" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="user" class="pojos.User" fetch="select">
+            <column name="user_iduser" not-null="true" />
+        </many-to-one>
+        <property name="date" type="date">
+            <column name="date" length="10" />
+        </property>
+        <property name="time" type="time">
+            <column name="time" length="8" />
+        </property>
+        <property name="subTot" type="java.lang.Double">
+            <column name="sub_tot" precision="22" scale="0" />
+        </property>
+        <property name="addonTot" type="java.lang.Double">
+            <column name="addon_tot" precision="22" scale="0" />
+        </property>
+        <property name="disTot" type="java.lang.Double">
+            <column name="dis_tot" precision="22" scale="0" />
+        </property>
+        <property name="total" type="java.lang.Double">
+            <column name="total" precision="22" scale="0" />
+        </property>
+        <property name="status" type="string">
+            <column name="status" length="45" />
+        </property>
+        <set name="purchaseHistories" table="purchase_history" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="invoice_product_idinvoice_product" not-null="true" />
+            </key>
+            <one-to-many class="pojos.PurchaseHistory" />
+        </set>
+        <set name="invoiceProductHasItems" table="invoice_product_has_item" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="invoice_product_idinvoice_product" not-null="true" />
+            </key>
+            <one-to-many class="pojos.InvoiceProductHasItem" />
+        </set>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 4, 2018 3:43:44 PM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="pojos.Disandaddon" table="disandaddon" catalog="soft_shop">
+        <id name="iddisAndAddon" type="java.lang.Integer">
+            <column name="iddisAndAddon" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="product" class="pojos.Product" fetch="select">
+            <column name="product_idproduct" not-null="true" />
+        </many-to-one>
+        <property name="lastUpdateDate" type="date">
+            <column name="lastUpdateDate" length="10" />
+        </property>
+        <property name="discount" type="java.lang.Double">
+            <column name="discount" precision="22" scale="0" />
+        </property>
+        <property name="addon" type="java.lang.Double">
+            <column name="addon" precision="22" scale="0" />
+        </property>
+    </class>
+</hibernate-mapping>

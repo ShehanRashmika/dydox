@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd">
+<hibernate-reverse-engineering>
+  <schema-selection match-catalog="soft_shop"/>
+  <table-filter match-name="comments"/>
+  <table-filter match-name="product"/>
+  <table-filter match-name="p_rate"/>
+  <table-filter match-name="user"/>
+  <table-filter match-name="seller"/>
+  <table-filter match-name="seller_package"/>
+  <table-filter match-name="invoice_product_has_item"/>
+  <table-filter match-name="s_rate"/>
+  <table-filter match-name="product_has_platform"/>
+  <table-filter match-name="messages"/>
+  <table-filter match-name="disandaddon"/>
+  <table-filter match-name="admin"/>
+  <table-filter match-name="wish_list"/>
+  <table-filter match-name="notifications"/>
+  <table-filter match-name="invoice_product"/>
+  <table-filter match-name="purchase_history"/>
+  <table-filter match-name="invoice_package"/>
+  <table-filter match-name="sf_platform"/>
+  <table-filter match-name="product_has_support_os"/>
+  <table-filter match-name="seller_has_package"/>
+  <table-filter match-name="cart"/>
+  <table-filter match-name="support_os"/>
+  <table-filter match-name="cart_has_item"/>
+  <table-filter match-name="sf_category"/>
+  <table-filter match-name="wish_list_has_item"/>
+  <table-filter match-name="saved_seller"/>
+  <table-filter match-name="req_project"/>
+</hibernate-reverse-engineering>

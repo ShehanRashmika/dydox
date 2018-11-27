@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 4, 2018 3:43:44 PM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="pojos.WishList" table="wish_list" catalog="soft_shop">
+        <id name="idwishList" type="java.lang.Integer">
+            <column name="idwish_list" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="user" class="pojos.User" fetch="select">
+            <column name="user_iduser" not-null="true" />
+        </many-to-one>
+        <set name="wishListHasItems" table="wish_list_has_item" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="wish_list_idwish_list" not-null="true" />
+            </key>
+            <one-to-many class="pojos.WishListHasItem" />
+        </set>
+    </class>
+</hibernate-mapping>
